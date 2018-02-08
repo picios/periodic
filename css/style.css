@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.periodic-c {
+  overflow: hidden;
+  position: relative; }
+
+.periodic {
+  position: relative; }
+
+.periodic .element {
+  position: absolute;
+  font-size: 0.4em;
+  font-weight: normal;
+  font-family: monospace;
+  background: #fff; }
+
+.periodic .element .in-element:hover {
+  opacity: 1.0;
+  background-color: #6d6d81;
+  z-index: 200; }
+
+.periodic .element .in-element {
+  position: absolute;
+  top: 0.3em;
+  bottom: 0.3em;
+  left: 0.3em;
+  right: 0.3em;
+  background-color: #445;
+  color: #d1d1fc; }
+
+.periodic .element .symbol {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 4em; }
+
+.periodic .element .number {
+  position: absolute;
+  top: 2.8em;
+  right: 6.2em; }
+
+.periodic .element .atomic_mass {
+  position: absolute;
+  top: 0.2em;
+  right: 0.4em; }
+
+.periodic .element .name {
+  display: none;
+  position: absolute;
+  bottom: 0.5em;
+  left: 1em; }

@@ -1,0 +1,68 @@
+$color-element-bg-bg: #fff;
+$color-element-bg: #445;
+$color-element-bg-lighter: rgb(109, 109, 129);
+$color-element-title: rgb(209, 209, 252);
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.periodic-c {
+    overflow: hidden;
+    position: relative;
+}
+
+.periodic {
+    position: relative;
+}
+
+.periodic .element {
+    position: absolute;
+    font-size: 0.4em;
+    font-weight: normal;
+    font-family: monospace;
+    background: $color-element-bg-bg;
+}
+
+.periodic .element .in-element:hover {
+    opacity: 1.0;
+    background-color: $color-element-bg-lighter;
+    z-index: 200;
+}
+
+.periodic .element .in-element {
+    position: absolute;
+    top: 0.3em;
+    bottom: 0.3em;
+    left: 0.3em;
+    right: 0.3em;
+    background-color: $color-element-bg;
+    color: $color-element-title;
+}
+
+.periodic .element .symbol {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    font-size: 4em;
+}
+
+.periodic .element .number {
+    position: absolute;
+    top: 2.8em;
+    right: 6.2em;
+}
+
+.periodic .element .atomic_mass {
+    position: absolute;
+    top: 0.2em;
+    right: 0.4em;
+}
+
+.periodic .element .name {
+    display: none;
+    position: absolute;
+    bottom: 0.5em;
+    left: 1em;
+}
