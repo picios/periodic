@@ -3,9 +3,11 @@ import React from 'react';
 class Header extends React.Component {
     render() {
        return (
-          <div>
-             <h1>Periodic elements</h1>
-          </div>
+            <header>
+                <div>
+                    <h1>Periodic table</h1>
+                </div>
+            </header>
        );
     }
  }

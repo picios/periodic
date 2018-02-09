@@ -9,8 +9,9 @@ class Element extends React.Component {
         };
     }
     handleClick(number) {
+        //console.log(number)
         this.setState({selected: number});
-        this.props.onChangeFilter(number);
+        this.props.updateOpenDialog(number);
     }
     getClass(id) {
         var el = this.props.data;
@@ -19,7 +20,7 @@ class Element extends React.Component {
         classes.push('period-' + el.period)
         classes.push('posx-' + el.xpos);
         classes.push('posy-' + el.ypos);
-        classes.push((id === this.state.selected) ? 'active': 'default');
+        classes.push((id === this.state.selected) ? 'active' : 'default');
         return classes.join(' ');
     }
     render() {
@@ -30,12 +31,13 @@ class Element extends React.Component {
             top: (el.ypos-1) * width,
             width: width,
             height: width,
+            fontSize: Math.floor(this.props.elWidth / 10)
         };
         return (
             <div 
                 className={this.getClass(el.number)} 
                 style={myStyle} 
-                onClick={() => this.handleClick(el.number)}>
+                onClick={() => this.handleClick(this.props.index)}>
                 <div className="in-element">
                     <span className="number" title="Atomic number">{el.number}</span>
                     <span className="atomic_mass" title="Atomic mass">{el.atomic_mass}</span>

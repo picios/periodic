@@ -1,13 +1,45 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: monospace; }
+
+a {
+  color: #61dafb;
+  text-decoration: none; }
+
+a:hover {
+  opacity: 0.8; }
+
+header {
+  background-color: #20232a;
+  color: #fff;
+  padding: 1em 2em; }
+
+header h1, header h2 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: bottom; }
+
+header h2 {
+  padding-left: 2em;
+  font-size: 0.6em; }
 
 .periodic-c {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .periodic {
   position: relative; }
+
+.periodic.hold {
+  cursor: move; }
 
 .periodic .element {
   position: absolute;
@@ -27,7 +59,7 @@ body {
   bottom: 0.3em;
   left: 0.3em;
   right: 0.3em;
-  background-color: #445;
+  background-color: #20232a;
   color: #d1d1fc; }
 
 .periodic .element .symbol {
@@ -51,3 +83,90 @@ body {
   position: absolute;
   bottom: 0.5em;
   left: 1em; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #20232a;
+  color: #fff;
+  padding: 0.3em 2em; }
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 201;
+  background-color: #20232a;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 20px #fff; }
+
+.item .in-item {
+  padding: 1em 2em;
+  overflow: auto;
+  position: relative; }
+
+.item .menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  font-family: initial; }
+
+.item .menu a {
+  font-size: 4em;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  line-height: 0.7; }
+
+.item .menu .close-link {
+  color: #be1632; }
+
+.item .row {
+  font-size: 0;
+  margin: 10px 0; }
+
+.item .row label {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  font-weight: bold;
+  text-align: right;
+  font-size: 20px;
+  color: #61dafb; }
+
+.item .row .value {
+  vertical-align: top;
+  display: inline-block;
+  width: 70%;
+  font-size: 20px; }
+
+.item .row .value .in-value {
+  display: block;
+  padding-left: 1em; }
+
+.row.symbol {
+  position: absolute;
+  right: 40px;
+  top: 20px; }
+
+.row.symbol label {
+  display: none; }
+
+.row.symbol .in-value {
+  font-size: 10em;
+  opacity: 0.1;
+  z-index: -1; }
+
+@media only screen and (max-width: 748px) {
+  .item .in-item {
+    padding: 4em 1em 1em 1em; }
+  .item .row label, .item .row .value {
+    display: block;
+    width: 100%;
+    text-align: left; }
+  .item .row .value .in-value {
+    padding: 0; } }
