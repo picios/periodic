@@ -1,5 +1,6 @@
 # periodic
 Periodic table in React.js
+I used [https://github.com/Bowserinator/Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON) as an input data set.
 
 ## Install
 
