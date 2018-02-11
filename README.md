@@ -4,6 +4,9 @@ I used [https://github.com/Bowserinator/Periodic-Table-JSON](https://github.com/
 ## Install
 
 ```
+mkdir periodic
+cd periodic
+git clone https://github.com/sylvesteraswin/react-pinch-zoom.git
 npm install
 ```
 
@@ -18,6 +21,12 @@ http://localhost:8080
 ```
 npm run build
 ```
-
+## Production
+After a successful build action you may leave only the minimum working files
+```
+index.html
+css/style.css
+js/index.min.js
+```
 ## Demo
 [http://picios.pl/periodic/](http://picios.pl/periodic)
