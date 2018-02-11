@@ -102,7 +102,8 @@ footer {
   color: #fff;
   padding: 0;
   margin: 0;
-  box-shadow: 0 0 20px #fff; }
+  box-shadow: 0 0 20px #fff;
+  opacity: 0.96; }
 
 .item .in-item {
   padding: 1em 2em;
@@ -168,5 +169,7 @@ footer {
     display: block;
     width: 100%;
     text-align: left; }
+  .row.symbol label {
+    display: none; }
   .item .row .value .in-value {
     padding: 0; } }
