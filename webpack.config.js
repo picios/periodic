@@ -3,11 +3,11 @@ const webpack = require("webpack");
 
 var config = {
     entry: {
-        "index": "./main.js",
-        "index.min": "./main.js",
+        "js/index": "./main.js",
+        "js/index.min": "./main.js",
     },
     output: {
-        path: path.resolve(__dirname, "js"),
+        path: path.resolve(__dirname),
         filename: '[name].js',
     },
     devServer: {

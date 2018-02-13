@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemRow from './ItemRow.jsx';
+var FontAwesome = require('react-fontawesome');
 
 class ItemDialog extends React.Component {
     constructor(props) {
@@ -43,17 +44,23 @@ class ItemDialog extends React.Component {
                             href="#" 
                             className="prev-link"
                             onClick={this.handlePrevClick.bind(this)}
-                        >&lt;</a>
+                        >
+                            <FontAwesome name='chevron-left' />
+                        </a>
                         <a 
                             href="#" 
                             className="next-link"
                             onClick={this.handleNextClick.bind(this)}
-                        >&gt;</a>
+                        >
+                            <FontAwesome name='chevron-right' />
+                        </a>
                         <a 
                             href="#" 
                             className="close-link"
                             onClick={this.handleCloseClick.bind(this)}
-                        >&times;</a>
+                        >
+                            <FontAwesome name='times' />
+                        </a>
                     </div>
                     {this.props.show &&
                         <div 

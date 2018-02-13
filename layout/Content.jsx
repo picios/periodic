@@ -17,11 +17,14 @@ class Content extends React.Component {
             periodicTop: null,
             left: 0,
             top: 0,
-            scale: 1,
+            scale: this.props.scale,
             current: null,
         }
         //console.log('constructed');
     }
+    /*componentWillReceiveProps() {
+        console.log('dsd');
+    }*/
     componentDidMount() {
         var h = this.props.winHeight - this.periodicX.offsetTop;
         this.periodicX.style.height = h + 'px';
@@ -54,7 +57,13 @@ class Content extends React.Component {
             current: this.state.current + 1
         })
     }
-    // onWheel
+    handleWheal(event) {
+        if (event.deltaY < 0) {
+            this.props.onZooIn()
+        } else {
+            this.props.onZooOut()
+        }
+    }
     wheel(event) {
         var scaleX = this.state.scale;
         if (event.deltaY < 0 && scaleX < 2.5 ) {
@@ -126,6 +135,8 @@ class Content extends React.Component {
         }
     }
     render() {
+        this.state.scale = this.props.scale;
+
         var myStyle = {
             height: 10*this.state.elWidth,
             marginTop: this.state.top,
@@ -145,7 +156,7 @@ class Content extends React.Component {
                         className={this.getClass()} 
                         style={myStyle} 
                         ref={(ref) => { this.periodicElement = ref; }}
-                        onWheel={(e) => this.wheel(e)}
+                        onWheel={(e) => this.handleWheal(e)}
                         onMouseDown={(e) => this.catch(e)}
                         onMouseMove={(e) => this.move(e)}
                         onMouseUp={(e) => this.leave(e)}
