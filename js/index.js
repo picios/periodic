@@ -19559,7 +19559,11 @@ var Content = function (_React$Component) {
         value: function componentDidMount() {
             var h = this.props.winHeight - this.periodicX.offsetTop;
             this.periodicX.style.height = h + 'px';
-            //console.log(this,h)
+            var initialTop = (h - this.state.elWidth * 10) / 2;
+            //console.log(this.state, this.state.elWidth*2, this.props.winHeight*2, initialTop);
+            this.setState({
+                top: initialTop
+            });
         }
     }, {
         key: 'handleFilterUpdate',
