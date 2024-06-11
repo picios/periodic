@@ -6,7 +6,7 @@ I used [https://github.com/Bowserinator/Periodic-Table-JSON](https://github.com/
 ```
 mkdir periodic
 cd periodic
-git clone https://github.com/sylvesteraswin/react-pinch-zoom.git
+git clone https://github.com/picios/periodic.git
 npm install
 ```
 
